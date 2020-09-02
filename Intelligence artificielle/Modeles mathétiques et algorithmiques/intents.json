@@ -1,0 +1,73 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Salut", "Comment allez-vous", "Il y a quelqu'un ?", "Salut", "Hola", "Bonjour", "Bonne journée"],
+         "responses": ["Bonjour, merci d'avoir demandé", "Ravi de vous revoir", "Bonjour, comment puis-je vous aider?"],
+         "context": [""]
+        },
+        {"tag": "goodbye",
+         "patterns": ["Bye", "A plus tard", "Au revoir", "Ravi de vous avoir parlé, bye", "A la prochaine fois"],
+         "responses": ["À bientôt !", "Bonne journée", "Au revoir ! Revenez bientôt."],
+         "context": [""]
+        },
+        {"tag": "thanks",
+         "patterns": ["Merci", "Merci", "C'est utile", "Génial, merci", "Merci de m'avoir aidé"],
+         "responses": ["Heureux de vous aider !", "Quand vous voulez !", "Tout le plaisir est pour moi"],
+         "context": [""]
+        },
+        {"tag": "noanswer",
+         "patterns": [],
+         "responses": ["Désolé, je ne peux pas vous comprendre", "Veuillez me donner plus d'informations", "Je ne suis pas sûr de comprendre"],
+         "context": [""]
+        },
+        {"tag": "options",
+         "patterns": ["Comment vous pourriez m'aider", "Ce que vous pouvez faire", "Quelle aide vous apportez", "Comment vous pouvez être utile", "Quel soutien est offert"],
+         "responses": ["Je peux vous guider à travers la liste des effets indésirables des médicaments, le suivi de la tension artérielle, les hôpitaux et les pharmacies", "Offrir un soutien pour les effets indésirables des médicaments, la pression artérielle, les hôpitaux et les pharmacies"],
+         "context": [""]
+        },
+        {"tag": "adverse_drug",
+         "patterns": ["Comment vérifier les effets indésirables d'un médicament ?", "Ouvrez le module sur les médicaments indésirables", "Donnez-moi une liste des médicaments provoquant un comportement indésirable", "Liste de tous les médicaments adaptés aux patients présentant des effets indésirables", "Quels médicaments n'ont pas d'effets indésirables ?" ],
+         "responses": ["Naviguer vers le module sur les effets indésirables des médicaments"],
+         "context": [""]
+        },
+        {"tag": "blood_pressure",
+         "patterns": ["Module ouvert sur la pression artérielle", "Tâche liée à la pression artérielle", "Saisie des données relatives à la pression artérielle", "Je veux enregistrer les résultats de la pression artérielle", "Gestion des données relatives à la pression artérielle" ],
+         "responses": ["Naviguer vers le module Pression artérielle"],
+         "context": [""]
+        },
+        {"tag": "blood_pressure_search",
+         "patterns": ["Je veux rechercher l'historique des résultats de la pression artérielle", "Pression artérielle pour le patient", "Charger le résultat de la pression artérielle du patient", "Afficher les résultats de la pression artérielle du patient", "Trouver les résultats de la pression artérielle par ID" ],
+         "responses": ["Veuillez fournir l'identification du patient, l'identification du patient ?"],
+         "context": ["search_blood_pressure_by_patient_id"]
+        },
+        {"tag": "search_blood_pressure_by_patient_id",
+         "patterns": [],
+         "responses": ["Chargement du résultat de la pression artérielle pour le patient"],
+         "context": [""]
+        },
+        {"tag": "pharmacy_search",
+         "patterns": ["Trouvez-moi une pharmacie", "Trouver une pharmacie", "Liste des pharmacies à proximité", "Localiser une pharmacie", "Rechercher une pharmacie"],
+         "responses": ["Veuillez indiquer le nom de la pharmacie"],
+         "context": ["search_pharmacy_by_name"]
+        },
+        {"tag": "search_pharmacy_by_name",
+         "patterns": [],
+         "responses": ["Chargement des coordonnées de la pharmacie"],
+         "context": [""]
+        },
+        {"tag": "hospital_search",
+         "patterns": ["Recherche de l'hôpital", "Recherche de l'hôpital pour le transfert du patient", "Je veux rechercher les données de l'hôpital", "Recherche d'un patient à l'hôpital", "Recherche de détails sur l'hôpital"],
+         "responses": ["Veuillez indiquer le nom ou le lieu de l'hôpital"],
+         "context": ["search_hospital_by_params"]
+        },
+        {"tag": "search_hospital_by_params",
+         "patterns": [],
+         "responses": ["Veuillez indiquer le type d'hôpital"],
+         "context": ["search_hospital_by_type"]
+        },
+        {"tag": "search_hospital_by_type",
+         "patterns": [],
+         "responses": ["Chargement des coordonnées de l'hôpital"],
+         "context": [""]
+        }
+   ]
+}
